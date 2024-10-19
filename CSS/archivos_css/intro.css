@@ -1,64 +1,60 @@
-body
-{
-    background-color: beige;
-    color: gray;
+body {
+    background-color: #f0f0f0; /* Gris clarito */
+    color: #5c3d5e; /* Morado pastel oscuro */
+    margin: 0px;
+    padding: 0px;
 }
 
-header
-{
+header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-header h1
-{
-    margin: 0.5rem 1rem;
+header h1 {
+    margin: 0px;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: #735d78; /* Morado pastel intermedio */
 }
 
-header nav ul
-{
+header nav ul {
     display: flex;
     list-style: none;
     margin: 0px;
     margin-right: 1rem;
 }
 
-nav ul li
-{
-    margin: 1rem
-}
-
-header nav ul li a
-{
+header nav ul li a {
     display: block;
-    padding: 0.5rem, 1rem;
+    padding: 0.75rem 1rem;
     text-decoration: none;
-    color: darkgray;
-    transition: background-color 1s;
+    color: #a48dad; /* Morado pastel suave */
+    transition: background-color 1s ease;
 }
 
-header nav ul li a:hover
-{
-    background-color: gainsboro;
-    color: grey;
+header nav ul li a:hover {
+    background-color: #d3c1d7; /* Morado pastel claro */
+    color: #4a274f; /* Morado más oscuro */
 }
 
-main
-{
-    background-color: gainsboro;
-    color: black;
+main {
+    background-color: #e5e5e5; /* Gris muy claro */
+    color: #4a274f; /* Morado más oscuro */
     padding: 1rem;
 }
 
-main h2
-{
+main h2 {
     margin: 0.2px;
 }
 
-/*
-a
-{
-    color: gray;
-    background-color: violet;
-    line-height: 1.5;
-}*/
+.hero-panel {
+    display: inline-block;
+    background-color: #c5a1c4; 
+    padding: 2rem 3rem;
+    border: dotted 2px #4a274f;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    margin: 3rem;
+    width: 600px;
+}
