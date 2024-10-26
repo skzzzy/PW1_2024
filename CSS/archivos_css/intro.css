@@ -14,9 +14,8 @@ body
 header 
 {
     display: flex;
-    /*justify-content: space-between;*/
-    align-items: center;
-    justify-content: center; /*Teléfono*/
+    flex-direction: column;
+    justify-content: center;
 }
 
 header h1 
@@ -26,7 +25,7 @@ header h1
     padding: 0.5rem 1rem;
     text-align: center;
     font-size: 1.5rem;
-    color: #735d78; 
+    color: #735d78;
 }
 
 header nav ul 
@@ -43,20 +42,21 @@ header nav ul li a
     display: block;
     padding: 0.75rem 1rem;
     text-decoration: none;
-    color: #a48dad; 
+    color: #333; 
     transition: background-color 1s ease;
     border-bottom: 1px solid #bbb;
 }
 
 header nav ul li a:hover {
-    background-color: #d3c1d7; 
+    background-color: #a48dad; 
     color: #4a274f;
 }
 
 main 
 {
-    color: #4a274f; 
-    padding: 1rem;
+    background-color: #bbb;
+    /*color: #4a274f;*/ 
+    padding: 0;
 }
 
 main h2 
@@ -76,6 +76,7 @@ main h2
 .hero-panel img
 {
     width: 100%;
+    height: 80vh;
     object-fit: cover;
     object-position: center;
 }
@@ -135,6 +136,8 @@ main h2
     border: 1px solid #5c3d5e;
     width: 300px;
     overflow: hidden;
+    background-color: #a48dad;
+    border-radius: 13px;
 }
 
 .card img
@@ -164,12 +167,13 @@ main h2
     text-align: center;
     background-color: #735d78;
     color: #333;
+    font-weight: bold;
 }
 
 .card .precio
 {
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: absolute;
     width: 64px;
@@ -180,7 +184,7 @@ main h2
     background-color: #735d78;
     transform: translateY(-50%);
     font-weight: bold;
-    box-shadow: 1px 1px 1px #4a274f;
+    box-shadow: 1px 1px 10px #4a274f;
 }
 
 .card.highlighted
@@ -188,7 +192,12 @@ main h2
     background-color: #5c3d5e;
 }
 
-/*Lo último a aplicar*/
+.card.highlighted a 
+{
+    background-color: #5c3d5e;
+}
+
+/*Configuracion dependiendo a medidas si es para tablet / teléfono / pc*/
 @media(min-width:720px)
 {
     body
@@ -233,7 +242,10 @@ main h2
         transform: scale(0.8)translateY(10%);
     }
 
-    .Precios
+    .Precios .card:hover
+    {
+        transform: scale(1.1S);
+    }
 }
 
 @media(min-width:1025px)
