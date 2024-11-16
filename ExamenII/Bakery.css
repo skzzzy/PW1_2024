@@ -1,0 +1,380 @@
+
+.playfair-display-unique {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: relative;
+}
+
+#check {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+.branding img {
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.hero h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quotes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f9e4b7;
+    gap: 2rem;
+}
+
+.quotes .right {
+    width: 50%; 
+}
+
+.quotes .right picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.quotes .left {
+    width: 50%;
+}
+
+.quotes .left h2 {
+    margin-bottom: 1rem;
+}
+
+.quotes .contact label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.quotes .contact input, 
+.quotes .contact select, 
+.quotes .contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quotes .contact textarea {
+    resize: vertical;
+}
+
+.quotes .contact input[type="submit"] {
+    margin-top: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem;
+}
+
+.testimonials {
+    padding: 2rem;
+    background-color: #f3f3f3;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial {
+    text-align: center;
+    width: 30%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.testimonial img {
+    border-radius: 10%;
+    margin-bottom: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer .phones a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+footer nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    nav ul li a {
+        color: #333;
+        font-weight: bold;
+        padding: 1rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .testimonials-container {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 1.5rem; 
+        padding: 1rem;
+    }
+
+    .testimonial {
+        display: flex; 
+        align-items: center; 
+        width: 45%; 
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonials-container .testimonial:nth-child(3) {
+        width: 45%; 
+        margin-top: 1.5rem;
+    }
+    
+}
+
+/*Teléfono*/
+@media (max-width: 320px) {
+    body {
+        font-size: 14px; 
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #fff;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        justify-content: space-between;
+    }
+
+    #check:checked ~ nav ul {
+        display: flex; 
+    }
+    .testimonials-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 90%; 
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial img {
+        width: 30%; 
+        margin-right: 0; 
+        margin-bottom: 1rem; 
+    }
+
+    .testimonial .text {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .testimonials-container .testimonial:nth-child(3) {
+        width: 90%; 
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; 
+        padding: 1rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        background-color: #333;
+        color: #fff;
+    }
+
+    footer .phones a {
+        margin: 0.5rem 0;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    footer nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .quotes .contact input, 
+    .quotes .contact select, 
+    .quotes .contact textarea {
+        width: 90%;
+    }
+
+    .quotes .contact input[type="submit"] {
+        padding: 1rem;
+    }
+
+    .quotes {
+        flex-direction: column;
+    }
+
+    .quotes .left {
+        order: -1; 
+        width: 100%;
+        margin-bottom: 1rem; 
+    }
+
+    .quotes .right {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+    }
+    
+    footer .phones a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 1rem;
+    }
+    
+    footer nav ul li a{
+        color: white;
+        text-decoration: none;
+    }
+}
+

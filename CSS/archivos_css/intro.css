@@ -1,3 +1,5 @@
+
+
 *
 {
     box-sizing: border-box;
@@ -13,9 +15,13 @@ body
 
 header 
 {
+    position: sticky;
+    top: 0px;
+    left: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 900;
 }
 
 header h1 
@@ -253,5 +259,115 @@ main h2
     body
     {
         background-color: antiquewhite;
+    }
+}
+
+/*Fondo*/
+.full-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Atomo*/
+.circulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid 2px white;
+    border-radius: 50px;
+    transform-origin: center;
+    width: 120px;
+    height: 35px;
+    animation: orbitarVertical 1.5s infinite linear;
+}
+
+.progress2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: Solid 2px white;
+    border-radius: 50px;
+    transform-origin: center;
+    width: 35px;
+    height: 120px;
+    animation: orbitarHorizontal 1.5s infinite linear;
+}
+
+.progress3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: Solid 2px white;
+    border-radius: 50px;
+    /*transform: rotate(45deg);*/
+    transform-origin: center;
+    width: 35px;
+    height: 120px;
+    animation: orbitarDiagonal 1.5s infinite linear reverse;
+}
+
+.electron {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes orbitarVertical {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+
+@keyframes orbitarHorizontal {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbitarDiagonal {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+
+@keyframes orbitarElectron {
+    0% {
+        transform: rotate(0deg) translate(50px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(50px) rotate(-360deg);
     }
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bakery</title>
+    <link rel="stylesheet" href="codigo.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Delicious Bakery</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-panel">
+        <img src="https://via.placeholder.com/1300x720" alt="Imagen de fresas">
+        <div class="hero-text">
+            <h2>Delicious Bakery</h2>
+            <a href="#products" class="order-button">Ordenar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="products" class="products-section">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Producto 1">
+            <h3>Bakery Prod 1</h3>
+            <span class="price">$10</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Producto 2">
+            <h3>Bakery Prod 2</h3>
+            <span class="price">$10</span>
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contact" class="contact-section">
+        <h2>Solicitar una Cotización</h2>
+        <form action="#">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Producto:</label>
+            <select id="product" name="product">
+                <option value="prod1">Cheesecake</option>
+                <option value="prod2">3 Leches</option>
+                <option value="prod2">Galleta</option>
+                <option value="prod2">Pastel</option>
+                <option value="prod2">Muffin</option>
+            </select>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Delicious Bakery</p>
+        <p>Teléfono: +1 234 567 890</p>
+    </footer>
+</body>
+
+</html>
