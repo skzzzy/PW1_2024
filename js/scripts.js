@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function (){
-    //alert("Content Loaded desde Script externo js");
-
     let bolEdad = true;
     console.log("Iniciando JS", bolEdad);
     let resultado, resultado2;
@@ -93,32 +91,30 @@ document.addEventListener("DOMContentLoaded", function (){
             break;
     }
 
-    //Esctructuras de Ciclos o Iteraciones
-    
-    /*for( let i=0; i<10; i++)
-    {
-        console.log("Iteración for: ", i);
+    // Estructuras de Ciclos o Iteraciones.
+    for (let i=0; i<10; i++){
+        console.log("Iteracion for: ", i);
     }
-
     let intWhile = 10;
-    while( intWhile >= 0)
-    {
-        console.log("Interación while: ", intWhile);
-        intWhile --;
+    while ( intWhile >= 0){
+        console.log("Iteracion while: ", intWhile);
+        intWhile -= 1;
     }
 
-    let intDoWhile = 10;
-    do
-    {
-        console.log("Iteración Do While: ", intDoWhile);
-        intDoWhile++;
-    }while(intDoWhile > 10);
+    let intDoWhile = 50;
+    do {
+        console.log("Iteración Do While", intDoWhile);
+        intDoWhile--;
+    } while (intDoWhile < 10);
 
-    const arrColores = ("red","blue","green", 0x1234ab, 255);
+    const arrColores = ["red","blue","green", 123, 255];
 
     arrColores.forEach(
         (color)=>{
             console.log("Color Iterando: ", color);
         }
-    );*/
+    );
+
+    const miSlider = new SliderController();
+
 });
